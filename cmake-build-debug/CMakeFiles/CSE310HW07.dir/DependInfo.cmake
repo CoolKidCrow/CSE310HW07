@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/WafflezPC/CLionProjects/CSE310HW07/OddDegrees.cpp" "C:/Users/WafflezPC/CLionProjects/CSE310HW07/cmake-build-debug/CMakeFiles/CSE310HW07.dir/OddDegrees.cpp.obj"
   "C:/Users/WafflezPC/CLionProjects/CSE310HW07/main.cpp" "C:/Users/WafflezPC/CLionProjects/CSE310HW07/cmake-build-debug/CMakeFiles/CSE310HW07.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

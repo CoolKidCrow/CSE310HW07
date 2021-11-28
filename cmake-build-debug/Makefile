@@ -128,6 +128,30 @@ CSE310HW07/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/build
 .PHONY : CSE310HW07/fast
 
+OddDegrees.obj: OddDegrees.cpp.obj
+.PHONY : OddDegrees.obj
+
+# target to build an object file
+OddDegrees.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/OddDegrees.cpp.obj
+.PHONY : OddDegrees.cpp.obj
+
+OddDegrees.i: OddDegrees.cpp.i
+.PHONY : OddDegrees.i
+
+# target to preprocess a source file
+OddDegrees.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/OddDegrees.cpp.i
+.PHONY : OddDegrees.cpp.i
+
+OddDegrees.s: OddDegrees.cpp.s
+.PHONY : OddDegrees.s
+
+# target to generate assembly for a file
+OddDegrees.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/OddDegrees.cpp.s
+.PHONY : OddDegrees.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CSE310HW07
+	@echo ... OddDegrees.obj
+	@echo ... OddDegrees.i
+	@echo ... OddDegrees.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

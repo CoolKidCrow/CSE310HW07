@@ -1,8 +1,10 @@
 #include <iostream>
+#include "OddDegrees.h"
 using namespace std;
 
 int main() {
     int** arr;
+    int* oddDegrees;
     int n, m, row, col;
     cin >> n >> m;
 
@@ -21,15 +23,14 @@ int main() {
         arr[col][row] = 1;
     }
 
-    cout << n << " " << m << "\n";
+    oddDegrees = OddDegrees(arr, n);
 
     for(int i = 0; i <= n; i++){
-        for(int j = 0; j <= n; j++){
-            cout << arr[i][j];
+        if (oddDegrees[i] != 0)
+        {
+            cout << oddDegrees[i];
         }
-        cout << "\n";
     }
-
 
     for(int i = 0; i <= n;i++) {
         delete[] arr[i];
