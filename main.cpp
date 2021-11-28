@@ -25,13 +25,6 @@ int main() {
 
     oddDegrees = OddDegrees(arr, n);
 
-    for(int i = 0; i <= n; i++){
-        if (oddDegrees[i] != 0)
-        {
-            cout << oddDegrees[i];
-        }
-    }
-
     for(int i = 0; i <= n;i++) {
         delete[] arr[i];
     }
