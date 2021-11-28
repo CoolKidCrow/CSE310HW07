@@ -128,6 +128,30 @@ CSE310HW07/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/build
 .PHONY : CSE310HW07/fast
 
+FloydWarshall.obj: FloydWarshall.cpp.obj
+.PHONY : FloydWarshall.obj
+
+# target to build an object file
+FloydWarshall.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/FloydWarshall.cpp.obj
+.PHONY : FloydWarshall.cpp.obj
+
+FloydWarshall.i: FloydWarshall.cpp.i
+.PHONY : FloydWarshall.i
+
+# target to preprocess a source file
+FloydWarshall.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/FloydWarshall.cpp.i
+.PHONY : FloydWarshall.cpp.i
+
+FloydWarshall.s: FloydWarshall.cpp.s
+.PHONY : FloydWarshall.s
+
+# target to generate assembly for a file
+FloydWarshall.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/FloydWarshall.cpp.s
+.PHONY : FloydWarshall.cpp.s
+
 OddDegrees.obj: OddDegrees.cpp.obj
 .PHONY : OddDegrees.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CSE310HW07
+	@echo ... FloydWarshall.obj
+	@echo ... FloydWarshall.i
+	@echo ... FloydWarshall.s
 	@echo ... OddDegrees.obj
 	@echo ... OddDegrees.i
 	@echo ... OddDegrees.s

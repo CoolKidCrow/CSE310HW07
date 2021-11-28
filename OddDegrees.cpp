@@ -30,6 +30,6 @@ int* OddDegrees(int** arr, int n)
             cout << oddDegrees[i] << " ";
         }
     }
-    cout << "}";
+    cout << "}\n";
     return oddDegrees;
 }
