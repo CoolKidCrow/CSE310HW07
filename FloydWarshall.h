@@ -1,4 +1,6 @@
 #ifndef CSE310HW07_FLOYDWARSHALL_H
 #define CSE310HW07_FLOYDWARSHALL_H
 
+int** FloydWarshall(int**, int*, int);
+
 #endif //CSE310HW07_FLOYDWARSHALL_H

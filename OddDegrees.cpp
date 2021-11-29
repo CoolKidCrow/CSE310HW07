@@ -5,7 +5,7 @@ using namespace std;
 int* OddDegrees(int** arr, int n)
 {
     int* oddDegrees = new int(n);
-    int nodeCount = 0;
+    int nodeCount = 1;
     int count = 0;
 
     for(int i = 0; i < n; i++){
@@ -24,12 +24,18 @@ int* OddDegrees(int** arr, int n)
         }
         count = 0;
     }
+
+    int* sizedOddDegrees = new int(nodeCount);
+    sizedOddDegrees[0] = nodeCount;
+    for (int i = 1; i < nodeCount; i++)
+    {
+        sizedOddDegrees[i] = oddDegrees[i];
+    }
+
     cout << "The odd-degree vertices in G: O = { ";
-    for(int i = 0; i < n; i++){
-        if (oddDegrees[i] != 0){
-            cout << oddDegrees[i] << " ";
-        }
+    for(int i = 1; i < nodeCount; i++){
+            cout << sizedOddDegrees[i] << " ";
     }
     cout << "}\n";
-    return oddDegrees;
+    return sizedOddDegrees;
 }

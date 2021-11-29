@@ -1,10 +1,10 @@
 #include <iostream>
 #include "OddDegrees.h"
+#include "FloydWarshall.h"
 using namespace std;
 
 int main() {
     int** arr;
-    int* oddDegrees;
     int n, m, row, col;
     cin >> n >> m;
 
@@ -23,11 +23,17 @@ int main() {
         arr[col][row] = 1;
     }
 
-    oddDegrees = OddDegrees(arr, n);
+    int* oddDegrees = OddDegrees(arr, n);
+    int** floydWarshall = FloydWarshall(arr, oddDegrees, n);
 
     for(int i = 0; i <= n;i++) {
         delete[] arr[i];
     }
+    //for(int i = 0; i <= n;i++) {
+    //    delete[] floydWarshall[i];
+    //}
     delete[] arr;
+    //delete[] floydWarshall;
+    //delete[] oddDegrees;
     return 0;
 }
