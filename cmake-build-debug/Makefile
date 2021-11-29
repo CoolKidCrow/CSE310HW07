@@ -152,6 +152,30 @@ FloydWarshall.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/FloydWarshall.cpp.s
 .PHONY : FloydWarshall.cpp.s
 
+GreedyMatch.obj: GreedyMatch.cpp.obj
+.PHONY : GreedyMatch.obj
+
+# target to build an object file
+GreedyMatch.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/GreedyMatch.cpp.obj
+.PHONY : GreedyMatch.cpp.obj
+
+GreedyMatch.i: GreedyMatch.cpp.i
+.PHONY : GreedyMatch.i
+
+# target to preprocess a source file
+GreedyMatch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/GreedyMatch.cpp.i
+.PHONY : GreedyMatch.cpp.i
+
+GreedyMatch.s: GreedyMatch.cpp.s
+.PHONY : GreedyMatch.s
+
+# target to generate assembly for a file
+GreedyMatch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/GreedyMatch.cpp.s
+.PHONY : GreedyMatch.cpp.s
+
 OddDegrees.obj: OddDegrees.cpp.obj
 .PHONY : OddDegrees.obj
 
@@ -212,6 +236,9 @@ help:
 	@echo ... FloydWarshall.obj
 	@echo ... FloydWarshall.i
 	@echo ... FloydWarshall.s
+	@echo ... GreedyMatch.obj
+	@echo ... GreedyMatch.i
+	@echo ... GreedyMatch.s
 	@echo ... OddDegrees.obj
 	@echo ... OddDegrees.i
 	@echo ... OddDegrees.s
