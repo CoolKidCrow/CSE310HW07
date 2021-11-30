@@ -26,13 +26,13 @@ int main() {
     int* oddDegrees = OddDegrees(arr, n);
     int** floydWarshall = FloydWarshall(arr, oddDegrees, n);
 
-    for(int i = 0; i <= n;i++) {
-        delete[] arr[i];
-    }
-    for(int i = 0; i <= n;i++) {
-        delete[] floydWarshall[i];
-    }
-    delete[] arr;
-    delete[] floydWarshall;
+    //for(int i = 0; i <= n;i++) {
+    //    delete[] arr[i];
+    //}
+    //for(int i = 0; i <= n;i++) {
+    //    delete[] floydWarshall[i];
+    //}
+    //delete[] arr;
+    //delete[] floydWarshall;
     return 0;
 }

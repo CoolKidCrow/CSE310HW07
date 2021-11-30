@@ -69,5 +69,5 @@ int** FloydWarshall(int** arr, int* odds, int n)
     }
 
 
-    return floydOdds;
+    return floyd;
 }
