@@ -26,7 +26,7 @@ int main() {
 
     int* oddDegrees = OddDegrees(arr, n);
     int** floydWarshall = FloydWarshall(arr, oddDegrees, n);
-    int* matching = GreedyMatch(floydWarshall, oddDegrees);
+    Edge* matching = GreedyMatch(floydWarshall, oddDegrees);
 
 
     //for(int i = 0; i <= n;i++) {
