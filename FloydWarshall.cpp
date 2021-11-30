@@ -39,7 +39,6 @@ int** FloydWarshall(int** arr, int* odds, int n)
         }
     }
 
-    cout << "\nResults of Floyd-Warshall on O:\n";
     for(int i = 0; i <= n; i++){
         for(int j = 0; j <= n; j++){
             for(int x = 1; x < odds[0]; x++){
@@ -56,12 +55,11 @@ int** FloydWarshall(int** arr, int* odds, int n)
         floydOdds[i][0] = odds[i];
     }
 
+    cout << "\nResults of Floyd-Warshall on O:\n  ";
     for(int i = 0; i < odds[0]; i++){
         for(int j = 0; j < odds[0]; j++){
-            if (i == 0 && j == 0)
+            if (!(i == 0 && j == 0))
             {
-                cout << "  ";
-            }else{
                 cout << floydOdds[i][j] << " ";
             }
         }
@@ -69,5 +67,5 @@ int** FloydWarshall(int** arr, int* odds, int n)
     }
 
 
-    return floyd;
+    return floydOdds;
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "OddDegrees.h"
 #include "FloydWarshall.h"
+#include "GreedyMatch.h"
 using namespace std;
 
 int main() {
@@ -25,6 +26,8 @@ int main() {
 
     int* oddDegrees = OddDegrees(arr, n);
     int** floydWarshall = FloydWarshall(arr, oddDegrees, n);
+    int* matching = GreedyMatch(floydWarshall, oddDegrees);
+
 
     //for(int i = 0; i <= n;i++) {
     //    delete[] arr[i];
