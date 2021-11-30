@@ -29,32 +29,45 @@ int** FloydWarshall(int** arr, int* odds, int n)
         }
     }
 
+    int** floydOdds = new int*[odds[0]];
+    for(int i = 0; i < odds[0]; i++){
+        floydOdds[i] = new int[odds[0]];
+    }
+    for(int i = 0; i < odds[0]; i++){
+        for(int j = 0; j < odds[0]; j++){
+            floydOdds[i][j] = 0;
+        }
+    }
+
     cout << "\nResults of Floyd-Warshall on O:\n";
-    cout << "  ";
-    for(int i = 1; i < odds[0]; i++){
-        cout << odds[i] << " ";
-    }
-    cout << "\n  ";
-    for(int i = 1; i < odds[0]; i++){
-        cout << "---";
-    }
-    cout << "\n";
     for(int i = 0; i <= n; i++){
         for(int j = 0; j <= n; j++){
             for(int x = 1; x < odds[0]; x++){
                 for(int y = 1; y < odds[0]; y++){
                     if(odds[x] == i && odds[y] == j){
-                        if (y == 1){
-                            cout << odds[x] << "| ";
-                        }
-                        cout << floyd[i][j] << " ";
-                        if (y == odds[0] - 1)
-                            cout << "\n";
+                        floydOdds[x][y] = floyd[i][j];
                     }
                 }
             }
         }
     }
+    for(int i = 1; i < odds[0]; i++){
+        floydOdds[0][i] = odds[i];
+        floydOdds[i][0] = odds[i];
+    }
 
-    return floyd;
+    for(int i = 0; i < odds[0]; i++){
+        for(int j = 0; j < odds[0]; j++){
+            if (i == 0 && j == 0)
+            {
+                cout << "  ";
+            }else{
+                cout << floydOdds[i][j] << " ";
+            }
+        }
+        cout << "\n";
+    }
+
+
+    return floydOdds;
 }

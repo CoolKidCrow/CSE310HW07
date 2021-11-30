@@ -29,11 +29,10 @@ int main() {
     for(int i = 0; i <= n;i++) {
         delete[] arr[i];
     }
-    //for(int i = 0; i <= n;i++) {
-    //    delete[] floydWarshall[i];
-    //}
+    for(int i = 0; i <= n;i++) {
+        delete[] floydWarshall[i];
+    }
     delete[] arr;
-    //delete[] floydWarshall;
-    //delete[] oddDegrees;
+    delete[] floydWarshall;
     return 0;
 }
