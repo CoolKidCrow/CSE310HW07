@@ -128,6 +128,30 @@ CSE310HW07/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/build
 .PHONY : CSE310HW07/fast
 
+EulerianCircuit.obj: EulerianCircuit.cpp.obj
+.PHONY : EulerianCircuit.obj
+
+# target to build an object file
+EulerianCircuit.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/EulerianCircuit.cpp.obj
+.PHONY : EulerianCircuit.cpp.obj
+
+EulerianCircuit.i: EulerianCircuit.cpp.i
+.PHONY : EulerianCircuit.i
+
+# target to preprocess a source file
+EulerianCircuit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/EulerianCircuit.cpp.i
+.PHONY : EulerianCircuit.cpp.i
+
+EulerianCircuit.s: EulerianCircuit.cpp.s
+.PHONY : EulerianCircuit.s
+
+# target to generate assembly for a file
+EulerianCircuit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CSE310HW07.dir\build.make CMakeFiles/CSE310HW07.dir/EulerianCircuit.cpp.s
+.PHONY : EulerianCircuit.cpp.s
+
 FloydWarshall.obj: FloydWarshall.cpp.obj
 .PHONY : FloydWarshall.obj
 
@@ -233,6 +257,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CSE310HW07
+	@echo ... EulerianCircuit.obj
+	@echo ... EulerianCircuit.i
+	@echo ... EulerianCircuit.s
 	@echo ... FloydWarshall.obj
 	@echo ... FloydWarshall.i
 	@echo ... FloydWarshall.s

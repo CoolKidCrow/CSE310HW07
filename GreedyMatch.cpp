@@ -53,5 +53,12 @@ Edge* GreedyMatch(int** floyd, int* odds)
     //sets index 0 weight to the amount of pairs in perfectMatch to make it easier to iterate through later
     perfectMatch[0].weight = (x / 2);
 
+    cout << "\nThe greedy perfect matching in O: M = { ";
+    for(int i = 1; i <= perfectMatch[0].weight; i++){
+        cout << "(" << perfectMatch[i].x1 << "," << perfectMatch[i].x2 << ") ";
+    }
+    cout << "}\n";
+
+
     return  perfectMatch;
 }

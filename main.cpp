@@ -28,6 +28,12 @@ int main() {
     int** floydWarshall = FloydWarshall(arr, oddDegrees, n);
     Edge* matching = GreedyMatch(floydWarshall, oddDegrees);
 
+    //inserts are perfect matching pairs into the adjacency array
+    for(int i = 1; i <= matching[0].weight; i++){
+        arr[matching[i].x1][matching[i].x2] = matching[i].weight;
+    }
+
+
 
     //for(int i = 0; i <= n;i++) {
     //    delete[] arr[i];

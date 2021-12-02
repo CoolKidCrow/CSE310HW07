@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/GreedyMatch.cpp
-GreedyMatch.h
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/FloydWarshall.h
+
 C:/Users/WafflezPC/CLionProjects/CSE310HW07/GreedyMatch.h
+
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/OddDegrees.h
+
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/main.cpp
 iostream
 -
-
+OddDegrees.h
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/OddDegrees.h
+FloydWarshall.h
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/FloydWarshall.h
+GreedyMatch.h
 C:/Users/WafflezPC/CLionProjects/CSE310HW07/GreedyMatch.h
 
