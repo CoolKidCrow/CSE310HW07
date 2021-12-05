@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/WafflezPC/CLionProjects/CSE310HW07/FloydWarshall.cpp" "C:/Users/WafflezPC/CLionProjects/CSE310HW07/cmake-build-debug/CMakeFiles/CSE310HW07.dir/FloydWarshall.cpp.obj"
   "C:/Users/WafflezPC/CLionProjects/CSE310HW07/GreedyMatch.cpp" "C:/Users/WafflezPC/CLionProjects/CSE310HW07/cmake-build-debug/CMakeFiles/CSE310HW07.dir/GreedyMatch.cpp.obj"
   "C:/Users/WafflezPC/CLionProjects/CSE310HW07/OddDegrees.cpp" "C:/Users/WafflezPC/CLionProjects/CSE310HW07/cmake-build-debug/CMakeFiles/CSE310HW07.dir/OddDegrees.cpp.obj"
+  "C:/Users/WafflezPC/CLionProjects/CSE310HW07/Stack.cpp" "C:/Users/WafflezPC/CLionProjects/CSE310HW07/cmake-build-debug/CMakeFiles/CSE310HW07.dir/Stack.cpp.obj"
   "C:/Users/WafflezPC/CLionProjects/CSE310HW07/main.cpp" "C:/Users/WafflezPC/CLionProjects/CSE310HW07/cmake-build-debug/CMakeFiles/CSE310HW07.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

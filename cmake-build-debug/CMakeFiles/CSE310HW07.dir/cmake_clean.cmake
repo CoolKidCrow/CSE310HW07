@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CSE310HW07.dir/FloydWarshall.cpp.obj"
   "CMakeFiles/CSE310HW07.dir/GreedyMatch.cpp.obj"
   "CMakeFiles/CSE310HW07.dir/OddDegrees.cpp.obj"
+  "CMakeFiles/CSE310HW07.dir/Stack.cpp.obj"
   "CMakeFiles/CSE310HW07.dir/main.cpp.obj"
   "CSE310HW07.exe"
   "CSE310HW07.exe.manifest"

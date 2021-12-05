@@ -6,19 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/FloydWarshall.h
-
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/GreedyMatch.h
-
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/OddDegrees.h
-
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/main.cpp
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/EulerianCircuit.cpp
+EulerianCircuit.h
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/EulerianCircuit.h
 iostream
 -
-OddDegrees.h
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/OddDegrees.h
-FloydWarshall.h
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/FloydWarshall.h
-GreedyMatch.h
-C:/Users/WafflezPC/CLionProjects/CSE310HW07/GreedyMatch.h
+Stack.h
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/Stack.h
+
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/EulerianCircuit.h
+Util.h
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/Util.h
+
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/Stack.h
+Util.h
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/Util.h
+
+C:/Users/WafflezPC/CLionProjects/CSE310HW07/Util.h
 

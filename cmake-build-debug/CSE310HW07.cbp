@@ -106,6 +106,15 @@
 		<Unit filename="C:/Users/WafflezPC/CLionProjects/CSE310HW07/OddDegrees.h">
 			<Option target="CSE310HW07"/>
 		</Unit>
+		<Unit filename="C:/Users/WafflezPC/CLionProjects/CSE310HW07/Stack.cpp">
+			<Option target="CSE310HW07"/>
+		</Unit>
+		<Unit filename="C:/Users/WafflezPC/CLionProjects/CSE310HW07/Stack.h">
+			<Option target="CSE310HW07"/>
+		</Unit>
+		<Unit filename="C:/Users/WafflezPC/CLionProjects/CSE310HW07/Util.h">
+			<Option target="CSE310HW07"/>
+		</Unit>
 		<Unit filename="C:/Users/WafflezPC/CLionProjects/CSE310HW07/main.cpp">
 			<Option target="CSE310HW07"/>
 		</Unit>

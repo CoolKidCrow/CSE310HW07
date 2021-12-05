@@ -17,6 +17,7 @@ Edge* GreedyMatch(int** floyd, int* odds)
                 edges[index].x1 = floyd[i][0];
                 edges[index].x2 = floyd[0][j];
                 edges[index].weight = floyd[i][j];
+                edges[index].isVirtual = true;
                 index++;
             }
         }

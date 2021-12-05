@@ -2,7 +2,11 @@
 #include "OddDegrees.h"
 #include "FloydWarshall.h"
 #include "GreedyMatch.h"
+#include "EulerianCircuit.h"
+#include "Util.h"
 using namespace std;
+
+int z = 0;
 
 int main() {
     int** arr;
@@ -24,24 +28,11 @@ int main() {
         arr[col][row] = 1;
     }
 
+
     int* oddDegrees = OddDegrees(arr, n);
     int** floydWarshall = FloydWarshall(arr, oddDegrees, n);
     Edge* matching = GreedyMatch(floydWarshall, oddDegrees);
+    EulerianCircuit(arr, matching, n, m);
 
-    //inserts are perfect matching pairs into the adjacency array
-    for(int i = 1; i <= matching[0].weight; i++){
-        arr[matching[i].x1][matching[i].x2] = matching[i].weight;
-    }
-
-
-
-    //for(int i = 0; i <= n;i++) {
-    //    delete[] arr[i];
-    //}
-    //for(int i = 0; i <= n;i++) {
-    //    delete[] floydWarshall[i];
-    //}
-    //delete[] arr;
-    //delete[] floydWarshall;
     return 0;
 }

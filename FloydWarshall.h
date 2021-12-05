@@ -3,4 +3,6 @@
 
 int** FloydWarshall(int**, int*, int);
 
+int* RecoverPath(int**);
+
 #endif //CSE310HW07_FLOYDWARSHALL_H
