@@ -69,3 +69,64 @@ int** FloydWarshall(int** arr, int* odds, int n)
 
     return floydOdds;
 }
+
+void RecoverPath(int** arr, int n, Edge edge)
+{
+    int** floyd = new int*[n+1];
+    int** next = new int*[n+1];
+    for(int i = 0; i <= n; i++){
+        floyd[i] = new int[n+1];
+        next[i] = new int[n+1];
+    }
+    for(int i = 0; i <= n; i++){
+        for(int j = 0; j <= n; j++){
+            if(arr[i][j] == 1){
+                floyd[i][j] = arr[i][j];
+                next[i][j] = j;
+            }else{
+                floyd[i][j] = INT16_MAX;
+                next[i][j] = NULL;
+            }
+        }
+    }
+    for(int i = 1; i <= n; i++){
+        floyd[i][i] = 0;
+        next[i][i] = i;
+    }
+    for(int k = 1; k <= n; k++){
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= n; j++){
+                if (floyd[i][j] > floyd[i][k] + floyd[k][j]){
+                    floyd[i][j] = floyd[i][k] + floyd[k][j];
+                    next[i][j] = next[i][k];
+                }
+            }
+        }
+    }
+
+    int* path = new int[n];
+    int index = 1;
+    int u = edge.x1;
+    int v = edge.x2;
+    path[0] = u;
+    while (u != v)
+    {
+        u = next[u][v];
+        path[index] = u;
+        index++;
+        path[index] = u;
+        index++;
+    }
+    int counter = 0;
+    for(int i = 0; i < index - 1; i++)
+    {
+        if (counter == 0){
+            cout << "(" << path[i] << ",";
+            counter++;
+        }else{
+            cout << path[i] << ")\n";
+            counter = 0;
+        }
+    }
+
+}

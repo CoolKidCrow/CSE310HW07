@@ -1,6 +1,7 @@
 #include "EulerianCircuit.h"
 #include <iostream>
 #include "Stack.h"
+#include "FloydWarshall.h"
 using namespace std;
 
 int** adjMatrix;
@@ -13,7 +14,16 @@ int index = 0;
 
 void EulerianCircuit(int** arr, Edge* matching, int n, int m)
 {
-    adjMatrix = arr;
+    adjMatrix = new int*[n+1];
+    for(int i = 0; i <= n; i++){
+        adjMatrix[i] = new int[n+1];
+    }
+    for(int i = 0; i <= n; i++){
+        for(int j = 0; j <= n; j++){
+            adjMatrix[i][j] = arr[i][j];
+        }
+    }
+
     visited = new bool [n];
     for(int i = 1; i <= n; i++){
         visited[i] = false;
@@ -38,8 +48,13 @@ void EulerianCircuit(int** arr, Edge* matching, int n, int m)
 
     DFS(1, n);
 
+    cout << "\nThe Euler circuit in G with virtual edges is:\n";
     for(int i = 0; i < index; i++){
-        cout << circuit[i].x1 << ", " << circuit[i].x2 << " isVirtual: " << circuit[i].isVirtual << "\n";
+        if (circuit[i].isVirtual){
+            RecoverPath(arr, n, circuit[i]);
+        }else{
+            cout << "(" << circuit[i].x1 << "," << circuit[i].x2 << ")\n";
+        }
     }
 }
 
@@ -50,7 +65,6 @@ void DFS(int vertex, int n)
         {
                 struct Edge edge = {vertex, i, adjMatrix[vertex][i], false};
                 stack->push(edge);
-                cout << vertex << ", " << i << "\n";
                 adjMatrix[vertex][i] = 0;
                 adjMatrix[i][vertex] = 0;
                 DFS(i, n);
@@ -59,7 +73,6 @@ void DFS(int vertex, int n)
         {
             struct Edge edge = {vertex, i, virtualMatrix[vertex][i], true};
             stack->push(edge);
-            cout << vertex << ", " << i << "\n";
             virtualMatrix[vertex][i] = 0;
             virtualMatrix[i][vertex] = 0;
             DFS(i, n);
@@ -67,10 +80,9 @@ void DFS(int vertex, int n)
     }
     if (stack->size() > 0){
         Edge pop = stack->pop();
+        circuit[index] = pop;
         circuit[index].x1 = pop.x2;
         circuit[index].x2 = pop.x1;
-        circuit[index].weight = pop.weight;
-        circuit[index].isVirtual = pop.isVirtual;
         index++;
     }
 }
