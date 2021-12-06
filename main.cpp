@@ -29,9 +29,10 @@ int main() {
     }
 
 
-    int* oddDegrees = OddDegrees(arr, n);
-    int** floydWarshall = FloydWarshall(arr, oddDegrees, n);
-    Edge* matching = GreedyMatch(floydWarshall, oddDegrees);
+
+    int* oDegrees = OddDegrees(arr, n);
+    int** floydWarshall = FloydWarshall(arr, oDegrees, n);
+    Edge* matching = GreedyMatch(floydWarshall, oDegrees);
     EulerianCircuit(arr, matching, n, m);
 
     return 0;

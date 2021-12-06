@@ -4,12 +4,14 @@ using namespace std;
 
 int* OddDegrees(int** arr, int n)
 {
-    int* oddDegrees = new int(n);
+    int* odds;
+    odds = (int*) malloc(n * sizeof(int));
     int nodeCount = 1;
     int count = 0;
 
-    for(int i = 0; i < n; i++){
-        oddDegrees[i] = 0;
+    for(int i = 0; i < n; i++)
+    {
+        odds[i] = 0;
     }
 
     for(int i = 0; i <= n; i++){
@@ -19,19 +21,18 @@ int* OddDegrees(int** arr, int n)
         }
         if (count % 2 != 0)
         {
-            oddDegrees[nodeCount] = i;
+            odds[nodeCount] = i;
             nodeCount++;
         }
         count = 0;
     }
 
-    int* sizedOddDegrees = new int(nodeCount);
+    int* sizedOddDegrees = (int*) malloc(nodeCount * sizeof(int));
     sizedOddDegrees[0] = nodeCount;
     for (int i = 1; i < nodeCount; i++)
     {
-        sizedOddDegrees[i] = oddDegrees[i];
+        sizedOddDegrees[i] = odds[i];
     }
-
     cout << "The odd-degree vertices in G: O = { ";
     for(int i = 1; i < nodeCount; i++){
             cout << sizedOddDegrees[i] << " ";

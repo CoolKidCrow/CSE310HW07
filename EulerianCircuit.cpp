@@ -28,10 +28,10 @@ void EulerianCircuit(int** arr, Edge* matching, int n, int m)
     for(int i = 1; i <= n; i++){
         visited[i] = false;
     }
-    stack = new Stack(m * 2);
+    stack = new Stack(m + matching[0].weight);
 
     virtualMatrix = new int*[n+1];
-    circuit = (Edge*) malloc(sizeof(Edge) * (2 * m));
+    circuit = (Edge*) malloc(sizeof(Edge) * (matching[0].weight * m));
 
     for(int i = 0; i <= n; i++){
         virtualMatrix[i] = new int[n+1];
