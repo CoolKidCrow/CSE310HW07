@@ -13,6 +13,7 @@ int main() {
     int n, m, row, col;
     cin >> n >> m;
 
+    //allocates space for a 2d matrix and initilizes it to 0
     arr = new int*[n+1];
     for(int i = 0; i <= n; i++){
         arr[i] = new int[n+1];
@@ -22,6 +23,7 @@ int main() {
             arr[i][j] = 0;
         }
     }
+    //takes the input and puts it in the 2d matrix
     for(int i = 0; i < m; i++){
         cin >> row >> col;
         arr[row][col] = 1;
@@ -29,7 +31,7 @@ int main() {
     }
 
 
-
+    //calls are various functions that all work to a passable degree :)
     int* oDegrees = OddDegrees(arr, n);
     int** floydWarshall = FloydWarshall(arr, oDegrees, n);
     Edge* matching = GreedyMatch(floydWarshall, oDegrees);

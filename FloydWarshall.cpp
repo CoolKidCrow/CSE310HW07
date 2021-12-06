@@ -4,6 +4,7 @@ using namespace std;
 
 int** FloydWarshall(int** arr, int* odds, int n)
 {
+    //creates a 2d matrix to find shortest path between nodes using floyd warshall algorithm
     int** floyd = new int*[n+1];
     for(int i = 0; i <= n; i++){
         floyd[i] = new int[n+1];
@@ -17,10 +18,12 @@ int** FloydWarshall(int** arr, int* odds, int n)
             }
         }
     }
+    //initializes the diagonal to 0
     for(int i = 1; i <= n; i++){
         floyd[i][i] = 0;
     }
 
+    //floyd warshall algorithm
     for(int k = 1; k <= n; k++){
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= n; j++){
@@ -29,6 +32,7 @@ int** FloydWarshall(int** arr, int* odds, int n)
         }
     }
 
+    //allocates and initializes a 2d matrix to 0
     int** floydOdds = new int*[odds[0]];
     for(int i = 0; i < odds[0]; i++){
         floydOdds[i] = new int[odds[0]];
@@ -39,6 +43,7 @@ int** FloydWarshall(int** arr, int* odds, int n)
         }
     }
 
+    //takes the vertices of interest(odds degrees) and puts it in its own 2d matrix
     for(int i = 0; i <= n; i++){
         for(int j = 0; j <= n; j++){
             for(int x = 1; x < odds[0]; x++){
@@ -50,6 +55,7 @@ int** FloydWarshall(int** arr, int* odds, int n)
             }
         }
     }
+    //used for printing makes the top and right side the odd value
     for(int i = 1; i < odds[0]; i++){
         floydOdds[0][i] = odds[i];
         floydOdds[i][0] = odds[i];
@@ -70,6 +76,7 @@ int** FloydWarshall(int** arr, int* odds, int n)
     return floydOdds;
 }
 
+//recovers the path by following the same algorithm but with some path recovery stuff i found off wikipedia
 void RecoverPath(int** arr, int n, Edge edge)
 {
     int** floyd = new int*[n+1];

@@ -23,7 +23,7 @@ Edge* GreedyMatch(int** floyd, int* odds)
         }
     }
 
-    //sorts edges array using insertion to maintain lexicographical order
+    //sorts edges array using insertion to maintain lexicographical order and because inefficiency is the key to success in life
     for(int i = 1; i < n; i++)
     {
         int j = i;

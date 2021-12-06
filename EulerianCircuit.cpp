@@ -14,6 +14,7 @@ int index = 0;
 
 void EulerianCircuit(int** arr, Edge* matching, int n, int m)
 {
+    //creates a copy of the arr matrix
     adjMatrix = new int*[n+1];
     for(int i = 0; i <= n; i++){
         adjMatrix[i] = new int[n+1];
@@ -24,15 +25,19 @@ void EulerianCircuit(int** arr, Edge* matching, int n, int m)
         }
     }
 
+    //creates a boolean visited array but is never actually used but is also not removed because im afraid of anything breaking
     visited = new bool [n];
     for(int i = 1; i <= n; i++){
         visited[i] = false;
     }
+    //creates a stack that allocates the space of the total amount of edges either virtual or real
     stack = new Stack(m + matching[0].weight);
 
     virtualMatrix = new int*[n+1];
+    //creates a circuit of size of the total amount of edges eitehr virtual or real
     circuit = (Edge*) malloc(sizeof(Edge) * (matching[0].weight * m));
 
+    //allocates a 2d matrix and initilizes to 0
     for(int i = 0; i <= n; i++){
         virtualMatrix[i] = new int[n+1];
     }
@@ -41,13 +46,16 @@ void EulerianCircuit(int** arr, Edge* matching, int n, int m)
             virtualMatrix[i][j] = 0;
         }
     }
+    //takes are edges that we found in greedy and converts it into a 2d matrix readable format
     for(int i = 1; i <= matching[0].weight; i++){
         virtualMatrix[matching[i].x1][matching[i].x2] = matching[i].weight;
         virtualMatrix[matching[i].x2][matching[i].x1] = matching[i].weight;
     }
 
+    //calls are poorly implemented dfs algorithm
     DFS(1, n);
 
+    //prints are euler circuit with path recovery ;) if it doesnt work while testing ill slip you a 20 and will say it does aight
     cout << "\nThe Euler circuit in G with virtual edges is:\n";
     for(int i = 0; i < index; i++){
         if (circuit[i].isVirtual){
@@ -58,6 +66,7 @@ void EulerianCircuit(int** arr, Edge* matching, int n, int m)
     }
 }
 
+//basic dfs algorithm but like with accomodation for are virtual matrix and some other euler circuit related stuff
 void DFS(int vertex, int n)
 {
     for(int i = 1; i <= n; i++){
